@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "f9482d83-c45a-489c-90a1-1571c32b5aa5",
+		"name": "Search-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47509777",
+		"_collection_link": "https://youssef-ai1001-4930846.postman.co/workspace/Youssef-Taha-Badawi's-Workspace~39786f23-b875-456c-8049-e6af54d83750/collection/47509777-f9482d83-c45a-489c-90a1-1571c32b5aa5?action=share&source=collection_link&creator=47509777"
+	},
+	"item": [
+		{
+			"name": "semantic-search",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "semantic_search",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "search_text",
+							"value": "Mind Your Nose",
+							"type": "text"
+						},
+						{
+							"key": "top_k",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "threshold",
+							"value": "0.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{api}}/semantic_search",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"semantic_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "new_text",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "new_text_id",
+							"value": "3040",
+							"type": "text"
+						},
+						{
+							"key": "case",
+							"value": "delete",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{api}}/update",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api",
+			"value": "http://0.0.0.0:8000"
+		}
+	]
+}

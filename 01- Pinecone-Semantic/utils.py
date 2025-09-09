@@ -106,7 +106,8 @@ def search_vectDB(query_text: str,
             vector=[query_embedding],
             top_k=top_k,
             namespace=index_name,
-            include_metadata=True,
+            # include_metadata=True,
+            # include_values=True,
             # filter=
         )
 

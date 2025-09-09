@@ -35,8 +35,8 @@ async def semantic_search(search_text:str = Form(...),
 
 # Endpoint for Updates
 @app.post('/update')
-async def update(new_text_id: int=Form(...),
-                 new_text: str=Form(None),
+async def update(new_text: str=Form(None),
+                 new_text_id: int=Form(...),
                  case: str=Form(..., description='case', enum=['upsert', 'delete'])):
 
     # Validate the new_text is not None if the case=upsert
@@ -46,7 +46,7 @@ async def update(new_text_id: int=Form(...),
 
     # For Upserting
     if case == 'upsert':
-        message = insert_vectorDB(text_id=new_text_id, text=new_text)
+        message = insert_vectorDB(text=new_text, text_id=new_text_id)
 
     # For Deleting
     elif case == 'delete':
