@@ -1,0 +1,12 @@
+pinecone
+sentence-transformers
+python-multipart
+python-dotenv
+transformers
+fastapi
+uvicorn
+tqdm
+python-multipart
+huggingface_hub
+sentencepiece
+sentencepiece
